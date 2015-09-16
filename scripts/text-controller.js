@@ -66,7 +66,9 @@ angular.module('moodRing').controller('TextCtrl', function($scope) {
           return;
       }
     }
-    return "You're feeling nothing in particular.";
+    $scope.mood = "You're feeling nothing in particular.";
+    $scope.color = "#555";
+    return;
   };
 
 });

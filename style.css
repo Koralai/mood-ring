@@ -1,0 +1,86 @@
+/*Background tile from subtlepatterns.com*/
+
+body {
+  background: #fff url('confectionary.png') repeat;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+p {
+  font-size: 16px;
+}
+
+h1 {
+  font-family: 'Bad Script', cursive;
+  font-size: 70px;
+}
+
+hr {
+  background: #77C9D4;
+  border: 0;
+  height: 5px;
+  width: 60%;
+}
+
+/* This parent can be any width and height */
+.block {
+  text-align: center;
+  height: 100vh;
+
+  /* May want to do this if there is risk the container may be narrower than the element inside */
+  /*white-space: nowrap;*/
+}
+
+/* The ghost, nudged to maintain perfect centering */
+.block:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+/* The element to be centered, can also be of any width and height */
+.centered {
+  display: inline-block;
+  vertical-align: middle;
+  width: 80vmin;
+  background: #B0E0E6;
+  padding: 10px;
+  color: #221;
+}
+
+.centered a {
+  color: #2A6F6F;
+}
+
+.centered a:hover, .centered a:active {
+  background: #8BD1DA;
+  text-decoration: none;
+}
+
+.centered .lead {
+  color: #006666;
+}
+
+.btn-ring {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background: #2A6F6F;
+  color: #eee;
+  font-size: 16px;
+  border: 0;
+}
+
+.btn-ring:hover, btn-ring:active {
+  background: #389494;
+  color: #eee;
+}
+
+.form-custom {
+  color: #555;
+  font-size: 16px;
+}
+
+.fa.fa-diamond.ring-gem {
+  font-size: 50px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <link data-require="bootstrap@3.3.5" data-semver="3.3.5" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <script data-require="bootstrap@3.3.5" data-semver="3.3.5" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script data-require="angular.js@1.4.3" data-semver="1.4.3" src="https://code.angularjs.org/1.4.3/angular.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/text-controller.js"></script>
+  <script src="scripts/ring-color-directive.js"></script>
+  <script src="scripts/tell-mood-directive.js"></script>
+</head>
+
+<body ng-app="moodRing">
+
+  <div class="block">
+    <div class="centered" ng-controller="TextCtrl as text">
+
+      <h1>
+        Mood Ring
+      </h1>
+
+      <h4>Articulating your feelings is hard! Let the mood ring assist you.</h4>
+
+      <p>Write the first thing that comes into your mind.</p>
+
+      <form class="form-inline" ng-submit="tellMood()">
+        <input type="text" ng-model="usrMsg" placeholder="First thought, best thought..." class="form-control form-custom" autofocus/>
+        <button class="btn btn-large btn-ring">Try Me On!</button>
+      </form>
+
+      <h4>The mood ring says...</h4>
+
+      <hr noshade>
+
+      <ring-color></ring-color>
+      <tell-mood-text></tell-mood-text>
+
+      <p align="right">
+        &mdash;Created by <a href="https://github.com/Koralai/Koralai.github.io" target="_blank">Koralai</a>.
+      </p>
+    </div>
+  </div>
+
+</body>
+
+</html>

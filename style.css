@@ -1,5 +1,7 @@
 /*Background tile from subtlepatterns.com*/
 
+/*Custom styling*/
+
 body {
   background: #fff url('confectionary.png') repeat;
   font-family: 'Noto Sans', sans-serif;
@@ -12,6 +14,11 @@ p {
 h1 {
   font-family: 'Bad Script', cursive;
   font-size: 70px;
+  margin-bottom: 40px;
+}
+
+h4 {
+  line-height: 1.5;
 }
 
 hr {
@@ -19,34 +26,6 @@ hr {
   border: 0;
   height: 5px;
   width: 60%;
-}
-
-/* This parent can be any width and height */
-.block {
-  text-align: center;
-  height: 100vh;
-
-  /* May want to do this if there is risk the container may be narrower than the element inside */
-  /*white-space: nowrap;*/
-}
-
-/* The ghost, nudged to maintain perfect centering */
-.block:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -0.25em; /* Adjusts for spacing */
-}
-
-/* The element to be centered, can also be of any width and height */
-.centered {
-  display: inline-block;
-  vertical-align: middle;
-  width: 80vmin;
-  background: #B0E0E6;
-  padding: 10px;
-  color: #221;
 }
 
 .centered a {
@@ -83,4 +62,42 @@ hr {
 
 .fa.fa-diamond.ring-gem {
   font-size: 50px;
+}
+
+/*Hacky CSS centering -- this was before FlexBox was widely supported. A relic for the ages...*/
+
+/* This parent can be any width and height */
+.block {
+  text-align: center;
+  height: 100vh;
+
+  /* May want to do this if there is risk the container may be narrower than the element inside */
+  /*white-space: nowrap;*/
+}
+
+/* The ghost, nudged to maintain perfect centering */
+.block:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+/* The element to be centered, can also be of any width and height */
+.centered {
+  display: inline-block;
+  vertical-align: middle;
+  width: 80vmin;
+  background: #B0E0E6;
+  padding: 10px;
+  color: #221;
+}
+
+/*Custom responsive display settings*/
+
+@media (max-width:415px) {
+  .centered {
+    width: 98vmin;
+  }
 }
